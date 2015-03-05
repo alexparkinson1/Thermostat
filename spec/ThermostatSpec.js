@@ -49,8 +49,27 @@ describe('Thermostat', function() {
       thermostat.changeTemperature(20);
       expect(thermostat.temp).toBe(32);
     });
-
   });
 
+  describe('the energy usage will be', function() {
+
+    it('low if below 18', function() {
+      thermostat.changeTemperature(-10);
+      expect(thermostat.energyUsage()).toEqual("Low");
+    });
+
+    it('normal if betwwen 18 and 25', function() {
+      expect(thermostat.energyUsage()).toEqual("Normal");
+    });
+
+    it('high if above 25', function() {
+      powerSaving = false;
+      thermostat.changeTemperature(10);
+      expect(thermostat.energyUsage()).toEqual("High");
+
+    });
+
+
+  });
 
 });

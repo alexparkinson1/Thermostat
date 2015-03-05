@@ -21,3 +21,9 @@ Thermostat.prototype.controlTemperature = function() {
   if (powerSaving === true && this.temp > powerSavingMaxTemp) {this.temp = powerSavingMaxTemp};
   if (powerSaving === false && this.temp > maximum_temperature) {this.temp = maximum_temperature};
 };
+
+Thermostat.prototype.energyUsage = function() {
+  if (this.temp < 18) return "Low";
+  else if (this.temp > 25) return "High";
+  else return "Normal";
+};
