@@ -14,7 +14,7 @@ Thermostat.prototype.changeTemperature = function(number) {
 
 Thermostat.prototype.resetTemperature = function() {
   this.temp = default_temperature;
-  };
+};
 
 Thermostat.prototype.controlTemperature = function() {
   if (this.temp < minimum_temperature) {this.temp = minimum_temperature};
