@@ -13,7 +13,7 @@ describe('Thermostat', function() {
     });
   });
 
-  describe('the temperature can be', function() {
+  describe('The temperature can be', function() {
 
     it('increased', function() {
       thermostat.changeTemperature(5);
