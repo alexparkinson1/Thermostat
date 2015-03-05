@@ -6,7 +6,7 @@ describe('Thermostat', function() {
     thermostat = new Thermostat();
   });
 
-  describe('on startup', function() {
+  describe('On startup', function() {
 
     it('is set to 20 degrees', function() {
       expect(thermostat.temp).toBe(20);
@@ -32,7 +32,7 @@ describe('Thermostat', function() {
     });
   });
 
-  describe('the temperature cannot', function() {
+  describe('The temperature cannot', function() {
 
     it('drop below 10', function() {
       thermostat.changeTemperature(-20);
@@ -51,7 +51,7 @@ describe('Thermostat', function() {
     });
   });
 
-  describe('the energy usage will be', function() {
+  describe('The energy usage will be', function() {
 
     it('low if below 18', function() {
       thermostat.changeTemperature(-10);
