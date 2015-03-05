@@ -30,7 +30,14 @@ describe('Thermostat', function() {
       thermostat.resetTemperature();
       expect(thermostat.temp).toBe(20);
     });
+  });
 
+  describe('the temperature cannot', function() {
+
+    it('drop below 10', function() {
+      thermostat.changeTemperature(-20);
+      expect(thermostat.temp).toBe(10);
+    });
 
   });
 
